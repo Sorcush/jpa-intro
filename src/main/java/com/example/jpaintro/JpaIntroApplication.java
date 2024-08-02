@@ -1,4 +1,4 @@
-package com.example.jpaintro.jpaintro;
+package com.example.jpaintro;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

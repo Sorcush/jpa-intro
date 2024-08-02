@@ -1,7 +1,7 @@
-package com.example.jpaintro.jpaintro.bootstrap;
+package com.example.jpaintro.bootstrap;
 
-import com.example.jpaintro.jpaintro.entity.Book;
-import com.example.jpaintro.jpaintro.repository.BookRepository;
+import com.example.jpaintro.entity.Book;
+import com.example.jpaintro.repository.BookRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
