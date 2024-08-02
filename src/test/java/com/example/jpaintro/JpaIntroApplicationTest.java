@@ -9,7 +9,7 @@ import static org.hamcrest.Matchers.*;
 import static org.hamcrest.MatcherAssert.*;
 
 @SpringBootTest
-class JpaIntroApplicationTests {
+class JpaIntroApplicationTest {
 
     @Autowired
     BookRepository bookRepository;
