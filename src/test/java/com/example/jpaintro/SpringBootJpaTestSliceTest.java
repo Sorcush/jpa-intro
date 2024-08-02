@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.test.annotation.Commit;
@@ -17,6 +18,7 @@ import static org.hamcrest.MatcherAssert.*;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @DataJpaTest
 @ComponentScan(basePackages = {"com.example.jpaintro.bootstrap"}) // bring DataInitializer
+@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)  // do not autoconfigure H2 DB
 class SpringBootJpaTestSliceTest {
 
     @Autowired
