@@ -30,7 +30,7 @@ class SpringBootJpaTestSliceTest {
     void testGpaTestSplice() {
         long countBefore = bookRepository.count();
 
-        bookRepository.save(new Book("my book", "12312", "self"));
+        bookRepository.save(new Book("my book", "12312", "self", null));
         long countAfter = bookRepository.count();
 
         assertThat(countBefore, is(lessThan(countAfter)));
