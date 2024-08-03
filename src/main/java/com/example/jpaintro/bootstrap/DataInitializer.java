@@ -19,12 +19,12 @@ public class DataInitializer implements CommandLineRunner {
     @Override
     public void run(String... args)  {
         bookRepository.deleteAll();
-        Book bookDDD = new Book("Domain Driven Design", "123", "Random House");
+        Book bookDDD = new Book("Domain Driven Design", "123", "Random House", null);
         Book savedDDD = bookRepository.save(bookDDD);
         log.info("Saved book: {}", savedDDD);
 
 
-        Book bookSIA= new Book("Spring In Action", "123354234", "Oriel");
+        Book bookSIA= new Book("Spring In Action", "123354234", "Oriel", null);
         Book savedSIA = bookRepository.save(bookSIA);
         log.info("Saved book: {}", savedSIA);
 
