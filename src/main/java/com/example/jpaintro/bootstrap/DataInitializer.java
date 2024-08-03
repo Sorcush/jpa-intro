@@ -1,6 +1,8 @@
 package com.example.jpaintro.bootstrap;
 
+import com.example.jpaintro.entity.AuthorUuid;
 import com.example.jpaintro.entity.Book;
+import com.example.jpaintro.repository.AuthorUuidRepository;
 import com.example.jpaintro.repository.BookRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -15,6 +17,7 @@ import org.springframework.stereotype.Component;
 public class DataInitializer implements CommandLineRunner {
 
     private final BookRepository bookRepository;
+    private final AuthorUuidRepository authorUuidRepository;
 
     @Override
     public void run(String... args)  {
@@ -31,5 +34,9 @@ public class DataInitializer implements CommandLineRunner {
         for (Book book : bookRepository.findAll()) {
             log.info("Book found: {}", book);
         }
+
+        AuthorUuid authorUuid = new AuthorUuid("John", "Smith");
+        AuthorUuid savedAuthor = authorUuidRepository.save(authorUuid);
+        log.info("Saved UUID author: {}", savedAuthor);
     }
 }
